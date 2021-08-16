@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://3.136.178.15/hashes
+    body:
+      encoding: UTF-8
+      string: '{"hashes":["TEST_HASH"]}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - 3.136.178.15
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - chainpoint-node
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 16 Aug 2021 07:49:41 GMT
+      Connection:
+      - keep-alive
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta":{"hash_received":"2021-08-16T07:49:41Z","processing_hints":{"cal":"2021-08-16T07:52:00Z","btc":"2021-08-16T09:49:41Z"}},"hashes":[{"proof_id":"83831fa0-fe66-11eb-8ef4-0122aa65d76d","hash":"c49dabdfaea9255289fa36c0743ac152789a5bcf22abebc54691d8f9f54a3647"}]}'
+  recorded_at: Mon, 16 Aug 2021 07:49:41 GMT
+recorded_with: VCR 6.0.0
