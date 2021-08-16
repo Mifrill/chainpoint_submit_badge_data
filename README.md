@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Present a means to enter badge data.
+- Take the data submitted and create a hash to submit to the network.
+- Submit this hash to the Chainpoint network.
+- Display information about the response from the network.
 
-Things you may want to cover:
+```
+bundle install
 
-* Ruby version
+bundle exec rails db:setup
 
-* System dependencies
+bundle exec rails s
 
-* Configuration
+visit http://localhost:3000/submit
 
-* Database creation
+bundle exec rails cucumber
 
-* Database initialization
+bundle exec rspec
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bundle exec rubocop
+```
