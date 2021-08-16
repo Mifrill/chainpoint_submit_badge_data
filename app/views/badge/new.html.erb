@@ -1,0 +1,9 @@
+<%= simple_form_for @badge, url: '/success', method: :post do |f| %>
+  <%= f.input :issue_date, as: :date, html5: true %>
+  <%= f.input :recipient_id, value: @badge.recipient.id, as: :hidden %>
+  <%= f.association :recipient do |recipient| %>
+    <%= recipient.input :name %>
+  <% end %>
+  <%= f.input :uuid %>
+  <%= f.button :submit %>
+<% end %>
